@@ -77,10 +77,11 @@
             <input type="text" id="Nombre" placeholder="nombre" oninput="updateOwnerName()">
           </td>
           <td>Servicios</td>
+          <td>Registro Fotográfico del Predio</td>
         </tr>
         <tr>
           <td>Teléfono: <input type="text" id="Telefono" placeholder="teléfono"></td>
-          <td class="table-interna" rowspan="8">
+          <td class="table-interna" rowspan="3">
             <table>
               <tr>
                 <th>Servicio</th>
@@ -98,8 +99,15 @@
               <tr><td>Recolección de residuos</td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><textarea rows="2" placeholder="Sin observaciones"></textarea></td></tr>
             </table>
           </td>
+          <td class="predio-foto-celda" rowspan="3">
+            <div class="predio-image-space" onclick="triggerUpload('predio-image-input')">
+              <input id="predio-image-input" type="file" accept="image/*" onchange="previewImage(event, 'predioImage')" style="display:none;">
+              <div id="predioImage-preview" class="predio-preview-space">
+                <span>Haz clic para subir imagen del predio</span>
+              </div>
+            </div>
+          </td>
         </tr>
-
         <tr><td>Correo Electrónico: <input type="email" id="Correo" placeholder="correo"></td></tr>
         <tr><td>Dirección: <input type="text" id="Direccion" placeholder="dirección"></td></tr>
       </table>
@@ -180,7 +188,7 @@
           <p>Elaboró:</p>
           <img src="../Assets/FirmaHector.jpeg" alt="Firma Daniela Orejuela" style="width:200px; height:70px; object-fit:contain;">
           <p><strong>HECTOR IVÁN BORDA MOLINA</strong></p>
-          <p>Residente Técnico - Contratista</p> 
+          <p>Residente Técnico - Contratista</p>
         </div>
       </div>
 
